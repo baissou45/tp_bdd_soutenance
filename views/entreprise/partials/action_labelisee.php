@@ -1,7 +1,7 @@
 <?php
-    include_once("../../Layout/blanc-haut.php");
+    include_once("../../../Layout/blanc-haut.php");
 
-    $actions = Helper::exec_whith_return_value($db, "select * from actions");
+    $actions = Helper::exec_whith_return_value($db, "select Actions.* from Actions, Labelliser where Labelliser.NomC = '{$_GET['NomC']}' and Labelliser.idAction = Actions.IdAction");
 ?>
 
 <div class="row">
@@ -9,7 +9,7 @@
         <div class="card m-b-30">
             <div class="card-body">
 
-                <h4 class="mt-0 header-title mb-4">List des actions</h4>
+                <h4 class="mt-0 header-title mb-4">List des actions labelisée par <strong><?php echo $_GET['NomC']; ?></strong> </h4>
 
                 <table id="datatable" class="table table-bordered dt-responsive nowrap" style="border-collapse: collapse; border-spacing: 0; width: 100%;">
                     <thead>
@@ -47,5 +47,5 @@
 </div> <!-- end row -->
 
 <?php
-    include("../../Layout/blanc-bas.php");
+    include("../../../Layout/blanc-bas.php");
 ?>

@@ -18,11 +18,31 @@
         }
     }
 
+    function update() {
+        $nomA = $_POST['nomA'];
+        $NbLikes = $_POST['NbLikes'];
+        $NomC = $_POST['NomC'];
+        $codeTA = $_POST['codeTA'];
+        $idAction = $_POST['idAction'];
+
+        try {
+            $db = Helper::connect_db();
+
+            $req = "UPDATE actions SET  nomA = '$nomA', NbLikes = $NbLikes, NomC = '$NomC', codeTA = '$codeTA' WHERE idAction = $idAction";
+            // $req = "Insert into actions (idAction, nomA, NbLikes, NomC, codeTA) values ($id, '$nomA', $NbLikes, '$NomC', '$codeTA')";
+
+            Helper::exec_whithout_return_value($db, $req);
+            header("location:/views/actions/index.php");
+        } catch (\Throwable $th) {
+            echo "Une erreur est survenue lors de l'exécussion de votre requete => ". $th->getMessage();
+        }
+    }
+
 
     if(isset($_POST['create_action'])){
         create();
     } else if(isset($_POST['update_action'])){
-        create();
+        update();
     }
 
 

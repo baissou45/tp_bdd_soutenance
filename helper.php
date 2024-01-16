@@ -30,11 +30,11 @@
                 $requet = $db->prepare($requet);
                 $requet->execute();
                 $resutl = $requet->fetchAll();
+                return $resutl;
             } catch (PDOException $e) {
                 echo "Une erreur est survenue lors de l'exécussion de votre requete => ". $e->getMessage();
             }
 
-            return $resutl;
         }
 
         static function exec_whithout_return_value($db, $requet){

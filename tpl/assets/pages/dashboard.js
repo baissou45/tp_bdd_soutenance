@@ -7,8 +7,8 @@
 !function ($) {
     "use strict";
 
-    var Dashboard = function () {
-    };
+    var Dashboard = function () {};
+
         //creates Bar chart
         Dashboard.prototype.createBarChart = function (element, data, xkey, ykeys, labels, lineColors) {
             Morris.Bar({
@@ -94,8 +94,6 @@
                 {label: "Offline", value: 20}
             ];
             this.createDonutChart('morris-donut-example', $donutData, ['#f0f1f4', '#2f8ee0', '#4bbbce']);
-
-          
         },
         //init
         $.Dashboard = new Dashboard, $.Dashboard.Constructor = Dashboard

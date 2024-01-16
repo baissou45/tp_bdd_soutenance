@@ -24,7 +24,7 @@
     <script src="/tpl/assets/plugins/morris/morris.min.js"></script>
     <script src="/tpl/assets/plugins/raphael/raphael-min.js"></script>
 
-    <script src="/tpl/assets/pages/dashboard.js"></script>
+    <!-- <script src="/tpl/assets/pages/dashboard.js"></script> -->
 
     <!-- Required datatable js -->
     <script src="/tpl/assets/plugins/datatables/jquery.dataTables.min.js"></script>
