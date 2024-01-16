@@ -8,7 +8,7 @@
 
         try {
             $db = Helper::connect_db();
-            $req = "Insert into typeaction (codeTA, Categorie, Description) values ('$codeTA', '$Categorie', '$Description')";
+            $req = "Insert into TypeAction (codeTA, Categorie, Description) values ('$codeTA', '$Categorie', '$Description')";
             Helper::exec_whithout_return_value($db, $req);
             header("location:/views/actions_type/index.php");
         } catch (\Throwable $th) {
@@ -24,7 +24,7 @@
         try {
             $db = Helper::connect_db();
 
-            $req = "UPDATE typeaction SET Categorie = '$Categorie', Description = '$Description' WHERE  codeTA = '$codeTA'";
+            $req = "UPDATE TypeAction SET Categorie = '$Categorie', Description = '$Description' WHERE  codeTA = '$codeTA'";
             Helper::exec_whithout_return_value($db, $req);
             header("location:/views/actions_type/index.php");
         } catch (\Throwable $th) {

@@ -9,7 +9,7 @@
 
         try {
             $db = Helper::connect_db();
-            $req = "Insert into programmefinancement (CodePg, NomP, Laprocedure, MontantMax) values ('$CodePg', '$NomP', '$Laprocedure', $MontantMax)";
+            $req = "Insert into ProgrammeFinancement (CodePg, NomP, Laprocedure, MontantMax) values ('$CodePg', '$NomP', '$Laprocedure', $MontantMax)";
             Helper::exec_whithout_return_value($db, $req);
             header("location:/views/programme_financement/index.php");
         } catch (\Throwable $th) {
@@ -26,7 +26,7 @@
         try {
             $db = Helper::connect_db();
 
-            $req = "UPDATE programmefinancement SET NomP = '$NomP', Laprocedure = '$Laprocedure', MontantMax = '$MontantMax' WHERE CodePg = '$CodePg'";
+            $req = "UPDATE ProgrammeFinancement SET NomP = '$NomP', Laprocedure = '$Laprocedure', MontantMax = '$MontantMax' WHERE CodePg = '$CodePg'";
             Helper::exec_whithout_return_value($db, $req);
             header("location:/views/programme_financement/index.php");
         } catch (\Throwable $th) {

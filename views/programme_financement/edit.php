@@ -1,7 +1,7 @@
 <?php
     include_once("../../Layout/blanc-haut.php");
 
-    $pg = Helper::exec_whith_return_value($db, "select * from programmefinancement where CodePg = '{$_GET['CodePg']}'" )[0];
+    $pg = Helper::exec_whith_return_value($db, "select * from ProgrammeFinancement where CodePg = '{$_GET['CodePg']}'" )[0];
 ?>
 
 <div class="row">
