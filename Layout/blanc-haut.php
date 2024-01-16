@@ -49,7 +49,7 @@
                 <div class="topbar-left">
                     <div class="">
                         <!--<a href="index.html" class="logo text-center">Fonik</a>-->
-                        <a href="/" class="logo"><img src="/tpl/assets/images/logo.png" height="20" alt="logo"></a>
+                        <a href="<?php __DIR__ ?>/index.php" class="logo"><img src="/tpl/assets/images/logo.png" height="20" alt="logo"></a>
                     </div>
                 </div>
 
