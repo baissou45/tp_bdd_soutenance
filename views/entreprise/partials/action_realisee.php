@@ -1,7 +1,7 @@
 <?php
     include_once("../../../Layout/blanc-haut.php");
 
-    $actions = Helper::exec_whith_return_value($db, "select * from actions where NomC = '{$_GET['NomC']}'");
+    $actions = Helper::exec_whith_return_value($db, "select * from Actions where NomC = '{$_GET['NomC']}'");
 ?>
 
 <div class="row">

@@ -1,7 +1,7 @@
 <?php
     include_once("../../Layout/blanc-haut.php");
 
-    $entreprise = Helper::exec_whith_return_value($db, "select * from entreprise where NomC = '{$_GET['NomC']}'" )[0];
+    $entreprise = Helper::exec_whith_return_value($db, "select * from Entreprise where NomC = '{$_GET['NomC']}'" )[0];
 ?>
 
 <div class="row">

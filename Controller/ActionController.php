@@ -9,7 +9,7 @@
 
         try {
             $db = Helper::connect_db();
-            $id = Helper::exec_whith_return_value($db, "select count(idAction) as id from actions")[0]['id'] + 1;
+            $id = Helper::exec_whith_return_value($db, "select count(idAction) as id from Actions")[0]['id'] + 1;
             $req = "Insert into actions (idAction, nomA, NbLikes, NomC, codeTA) values ($id, '$nomA', $NbLikes, '$NomC', '$codeTA')";
             Helper::exec_whithout_return_value($db, $req);
             header("location:/views/actions/index.php");

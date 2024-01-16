@@ -3,8 +3,8 @@
 
     $action = Helper::exec_whith_return_value($db, "select * from Actions where idAction = " . $_GET['idAction'])[0];
 
-    $compagnies = Helper::exec_whith_return_value($db, "select distinct NomC from entreprise");
-    $type_actions = Helper::exec_whith_return_value($db, "select distinct codeTA from actions");
+    $compagnies = Helper::exec_whith_return_value($db, "select distinct NomC from Entreprise");
+    $type_actions = Helper::exec_whith_return_value($db, "select distinct codeTA from Actions");
 ?>
 
 <div class="row">
