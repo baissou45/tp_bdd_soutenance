@@ -11,7 +11,7 @@
             <form action="/Controller/ProgrammeFinancementController.php" method="post">
 
                 <div class="card-body">
-                    <h4 class="mt-0 header-title mb-4">Edition de type d'action</h4>
+                    <h4 class="mt-0 header-title mb-4">Edition de programme de financement</h4>
 
                     <input type="hidden" name="CodePg" value="<?php echo $pg['CodePg']; ?>">
 

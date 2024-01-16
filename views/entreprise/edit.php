@@ -11,7 +11,7 @@
             <form action="/Controller/EntrepriseController.php" method="post">
 
                 <div class="card-body">
-                    <h4 class="mt-0 header-title mb-4">Création de type d'action</h4>
+                    <h4 class="mt-0 header-title mb-4">Edition d'une entreprise</h4>
 
                     <input type="hidden" name="NomC" value="<?php echo $entreprise['NomC']; ?>">
 

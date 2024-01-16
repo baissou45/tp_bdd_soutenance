@@ -10,7 +10,7 @@
 
         try {
             $db = Helper::connect_db();
-            $req = "Insert into entreprise (NomC, Secteur, Ville, SiteWeb, Taille_) values ('$NomC','$Secteur','$Ville','$SiteWeb','$Taille_')";
+            $req = "Insert into Entreprise (NomC, Secteur, Ville, SiteWeb, Taille_) values ('$NomC','$Secteur','$Ville','$SiteWeb','$Taille_')";
             Helper::exec_whithout_return_value($db, $req);
             header("location:/views/entreprise/index.php");
         } catch (\Throwable $th) {
@@ -28,7 +28,7 @@
         try {
             $db = Helper::connect_db();
 
-            $req = "UPDATE entreprise SET Secteur = '$Secteur', Ville = '$Ville', SiteWeb = '$SiteWeb', Taille_ = '$Taille_' WHERE NomC = '$NomC'";
+            $req = "UPDATE Entreprise SET Secteur = '$Secteur', Ville = '$Ville', SiteWeb = '$SiteWeb', Taille_ = '$Taille_' WHERE NomC = '$NomC'";
             Helper::exec_whithout_return_value($db, $req);
             header("location:/views/entreprise/index.php");
         } catch (\Throwable $th) {
